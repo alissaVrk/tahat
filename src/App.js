@@ -5,7 +5,7 @@ import './App.css';
 function App() {
 
   async function doStuff() {
-    const stuff = await fetch('https://lfemlaxoo4.execute-api.us-east-1.amazonaws.com/dev/hello')
+    const stuff = await fetch('/.netlify/serverless/hello')
     window.ssss = stuff
     window.jj = await stuff.json()
     console.log(stuff)
