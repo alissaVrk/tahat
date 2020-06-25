@@ -4,7 +4,7 @@ module.exports = {
     console.log('queryStringParameters', event.queryStringParameters)
     callback(null, {
       statusCode: 200,
-      body: JSON.stringify({ msg: 'Hello, World!' }),
+      body: JSON.stringify({ msg: 'Hello, World!', date: new Date() }),
     })
   } 
 } 
