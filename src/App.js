@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [date, setDate] = useState()
 
   async function doStuff() {
     const stuff = await fetch('/.netlify/functions/hello')
     window.ssss = stuff
-    window.jj = await stuff.json()
-    console.log(stuff)
+    const data = await stuff.json()
+    console.log(data)
+    setDate(data.date)
   }
   useEffect(() => {
     doStuff()
@@ -21,6 +23,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+  <p>THIS IS THE DATE {date}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
