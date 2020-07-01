@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
 
-  async function doStuff() {
-    const stuff = await fetch('/.netlify/functions/hello')
-    window.ssss = stuff
-    window.jj = await stuff.json()
-    console.log(stuff)
-  }
-  useEffect(() => {
-    doStuff()
-  })
+  // async function doStuff() {
+  //   const stuff = await fetch('/.netlify/functions/hello')
+  //   window.ssss = stuff
+  //   window.jj = await stuff.json()
+  //   console.log(stuff)
+  // }
+  // useEffect(() => {
+  //   doStuff()
+  // })
 
   return (
     <div className="App">
